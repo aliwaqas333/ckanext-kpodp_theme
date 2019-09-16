@@ -1,7 +1,7 @@
 ckanext-kpodp_theme
 =================
 
-opendata.kp.gov.pk CKAN theme
+http://opendata.kp.gov.pk CKAN theme
 
 Manually generating main.css
 ----------------------------
