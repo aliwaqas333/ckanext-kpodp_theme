@@ -1,2 +1,11 @@
-# ckanext-kpodp_theme
-KP opendata portal ckanext theme. Site is up at opendata.kp.gov.pk
+ckanext-kpodp_theme
+=================
+
+opendata.kp.gov.pk CKAN theme
+
+Manually generating main.css
+----------------------------
+
+Run `sass ckanext/kpodp_theme/public/css/sass/main.scss ckanext/kpodp_theme/public/css/main.css`
+
+This will be done automatically when deploying via ansible.

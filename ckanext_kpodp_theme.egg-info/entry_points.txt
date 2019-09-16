@@ -1,0 +1,5 @@
+
+        [ckan.plugins]
+        # Add plugins here, e.g.
+        kpodp_theme=ckanext.kpodp_theme.plugin:KPODPThemePlugin
+    

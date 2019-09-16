@@ -1,0 +1,8 @@
+<div class="vizcarousel-desc">
+  <h1 class="vizcarousel-desc-text"><a target="_blank" href="#">Grounded in KP</a></h1>
+  <p class="vizcarousel-desc-text author">by <a target="_blank" href="#"></a> & <a target="_blank" href="http://596acres.org/">596 Acres</a></p>
+  <p class="vizcarousel-desc-text">
+    Built using <a href="/dataset/land-use">Land Use</a> and <a href="#">more</a>.
+  </p>
+</div>
+<img src="/img/odp-viz-5.jpg">

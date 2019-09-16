@@ -1,0 +1,8 @@
+<div class="vizcarousel-desc">
+  <h1 class="vizcarousel-desc-text"><a target="_blank" href="#">KP Land Inventory for Urban Agriculture</a></h1>
+  <p class="vizcarousel-desc-text author">by <a target="_blank" href="#">PMRU</a></p>
+  <p class="vizcarousel-desc-text">
+    Built using <a href="/dataset/land-use">Land Use</a>, <a href="#">KP Land Cover Raster 2008</a>, and <a href="">more</a>.
+  </p>
+</div>
+<img src="/img/odp-viz-3.png">
