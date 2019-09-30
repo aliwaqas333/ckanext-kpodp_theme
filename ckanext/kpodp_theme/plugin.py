@@ -16,6 +16,20 @@ def most_recent_datasets(num=3):
     return datasets.get('results', [])
 
 
+def most_popular_groups():
+    '''Return a sorted list of the groups with the most datasets.'''
+
+    # Get a list of all the site's groups from KP OpenData Portal, sorted by number of
+    # datasets.
+    groups = tk.get_action('group_list')(
+        data_dict={'sort': 'package_count desc', 'all_fields': True})
+
+    # Truncate the list to the 5 most popular groups only.
+    groups = groups[:5]
+
+    return groups
+
+
 def dataset_count():
     """Return a count of all datasets"""
 
@@ -108,7 +122,8 @@ class KPODPThemePlugin(plugins.SingletonPlugin):
         return {'kpodp_theme_most_recent_datasets': most_recent_datasets,
                 'kpodp_theme_dataset_count': dataset_count,
                 'kpodp_theme_groups': groups,
-                'ckan_site_url': ckan_site_url}
+                'ckan_site_url': ckan_site_url,
+                'top_groups':most_popular_groups}
 
     def before_map(self, map):
         return map

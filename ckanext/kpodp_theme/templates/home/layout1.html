@@ -7,16 +7,44 @@ In the future, we could likely push a new item to the front page layouts
 dropdown in the settings page and rename this file layout4.html.
 
 -->
+<style type="text/css">
+  /*.browse-topic{
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .group_count_badge{
+   
+    display: none;
+   
+  }
+  .browse-topic:hover .group_count_badge{
+    position: absolute;
+    display: block;
+    top: -24px;
+    left: 47px;
 
+  }
+  .tooltip-arrow,
+.kp-odp-tooltip + .tooltip > .tooltip-inner {background-color: #1abc9c;}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] 
+.arrow::before {
+border-top-color: #00acd6;
+}
+*/
+
+.kp-odp-tooltip + .tooltip > .tooltip-inner {background-color: #1abc9c;}
+.kp-odp-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:#1abc9c!important; }
+</style>
 <div class="outer">
   <div role="main" class="hero inner">
     <div class="container">
       <div class="row row1">
         <div class="col-md-6 col1">
           <div class="module-content">
-            <h1 class="hero-text-heading hero-text">Your source for open data in the Khyber Pakhtunkhwa, Pakistan</h1>
+            <h1 class="hero-text-heading hero-text">Your Source for Open Data in Khyber Pakhtunkhwa, Pakistan</h1>
             <p class="hero-text-description hero-text">
-              Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
+              Here you will find data, tools and resources to conduct research, develop web and mobile applications, design data visualizations, and much more!
+  
             </p>
           </div>
         </div>
@@ -53,10 +81,10 @@ dropdown in the settings page and rename this file layout4.html.
       <div class="col-md-5 col-md-offset-1">
         <div class="module-content box getstarted">
           <p>
-            Get started by searching from
-            <b>{{ h.kpodp_theme_dataset_count() }}</b>
-            datasets that cover all dimensions of KP,
-            from city council districts to park locations.
+            Get started by searching the
+            <b class="badge">{{ h.kpodp_theme_dataset_count() }}</b>
+            datasets that cover all dimensions of KP, from city council districts to park locations.
+
           </p>
         </div>
       </div>
@@ -71,12 +99,16 @@ dropdown in the settings page and rename this file layout4.html.
           <h1 class="browse-heading">Browse by Topic</h1>
           <div>
               {% for topic in h.kpodp_theme_groups() %}
-                <a href="/group/{{ topic.name }}" class="browse-topic">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <a href="/group/{{ topic.name }}" class=" kp-odp-tooltip browse-topic" data-toggle="dataset-tooltip" title="{{ topic.package_count }} Datasets">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
                     {{ topic.display_name }}
+                    <!-- <span class="group_count_badge badge">{{ topic.package_count }}</span> -->
+
                   </div>
                 </a>
+                </div>
               {% endfor %}
           </div>
         </div>
@@ -90,13 +122,7 @@ dropdown in the settings page and rename this file layout4.html.
       <div class="col-md-6 col1">
         {% snippet 'home/snippets/latest_datasets.html' %}
       </div>
-      <!-- <div class="col-md-6 col2">
-        <div class="module-content box">
-          <h2 class="secondary-heading">Tweets</h2>
-          <a class="twitter-timeline"  height="420" data-chrome="nofooter noscrollbar  noheader transparent" href="https://twitter.com/opendataphilly" data-widget-id="547080711753449472">Tweets by @opendataphilly</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-      </div> -->
+      <!-- second col -->
     </div>
   </div>
 </div>
