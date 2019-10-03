@@ -1,8 +1,16 @@
+![](./kpodp-header.PNG)
 # ckanext-kpodp_theme
-=================
-http://opendata.kp.gov.pk CKAN theme
 
-## Installation:
+### http://opendata.kp.gov.pk CKAN theme
+
+
+### Datasets Page
+![](./kpodp-datasets.PNG)
+
+### Topics on front Page
+![](./kpodp-topics.PNG)
+
+# Installation:
 - copy the zip file to `/usr/lib/ckan/default/src`
 - cd `/usr/lib/ckan/default/src`
 - run ``` python setup.py install ```
