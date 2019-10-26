@@ -1,3 +1,5 @@
+For detailed documentation, visit https://aliwaqas.gitbook.io/opendata-portal-documentation/
+
 ![](./kpodp-header.PNG)
 # ckanext-kpodp_theme
 
